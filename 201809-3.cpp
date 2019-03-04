@@ -297,7 +297,7 @@ int main(void){
                 findMore(doc,temp[i+1]-1,resTemp,selectors,1);
 
             }
-
+            sort(resTemp.begin()+1,resTemp.end());
             res.push_back(resTemp);
 
         }
