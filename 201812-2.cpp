@@ -103,7 +103,22 @@ int main(void){
             }
             else{
 
+                int timeTemp = arr[i][1];
+                timeTemp += ryg[0];
+                time += timeTemp;
 
+                 /***状态转换代码***********/
+                 //当更新状态后遇到黄灯时，给后面的灯加上等待时间
+                for(int j = i + 1; j < n; ++j){
+
+                    if(arr[j][0] != 0){
+
+                        arr[j][1] -= timeTemp;
+
+                    }
+
+                }
+                /************************/
             }
 
         }
